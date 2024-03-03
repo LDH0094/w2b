@@ -11,11 +11,12 @@ const GameRecommendation: React.FC<{ recommendations: GameRecommendation[] }> = 
 }) => {
   return (
     <>
-      {recommendations.map((game, index) => (
+      {/* {recommendations.map((game, index) => (
         <Card key={index} title={game.name}>
           <p>{game.description}</p>
         </Card>
-      ))}
+      ))} */}
+      <p>placeholder hehe, you may put your recommendation here</p>
     </>
   );
 };
