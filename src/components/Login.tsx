@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, message } from 'antd';
 
+
+/**
+ * 
+ *  README!! changing this component will automatically reflect
+ *  /login view desing. So you can just work around with this component to desing your things.
+ * 
+ */
+
 const Login: React.FC = () => {
   const [loading, setLoading] = useState(false);
 
