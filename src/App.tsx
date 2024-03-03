@@ -18,6 +18,7 @@ import {
 } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 import type { MenuProps } from 'antd';
+import Login from './components/Login';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -30,6 +31,7 @@ const items: { icon: React.ReactNode; label: string; path: string }[] = [
   { icon: <VideoCameraOutlined />, label: 'Game Details', path: '/game/123' }, // Adjust the path as needed
   { icon: <UploadOutlined />, label: 'Search', path: '/search' },
   { icon: <BarChartOutlined />, label: 'Recommendations', path: '/recommendations' },
+  { icon:<UserOutlined />, label: 'Login', path: '/login' },
 ];
 
 const App: React.FC = () => {
@@ -82,6 +84,10 @@ const App: React.FC = () => {
                 <Route
                   path="/recommendations"
                   element={<GameRecommendation recommendations={[]} />}
+                />
+                  <Route
+                  path="/login"
+                  element={<Login/>}
                 />
               </Routes>
             </div>
