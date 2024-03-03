@@ -47,7 +47,7 @@ const App: React.FC = () => {
         <Sider
           style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0, top: 0, bottom: 0 }}
         >
-          <div className="demo-logo-vertical" />
+          <div className=""/>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
             {items.map((item, index) => (
               <Menu.Item key={String(index + 1)} icon={item.icon}>
