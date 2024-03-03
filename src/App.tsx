@@ -24,7 +24,7 @@ const { Header, Content, Footer, Sider } = Layout;
 
 
 // navigation is defined here
-// icon </> here is just a plain icon. Think of it as an emoji for each 
+// icon <UserOutlined/> here is just a plain icon. Think of it as an emoji for each 
 // label is where the text will be shown. 
 const items: { icon: React.ReactNode; label: string; path: string }[] = [
   { icon: <UserOutlined />, label: 'Home', path: '/' },
@@ -35,6 +35,8 @@ const items: { icon: React.ReactNode; label: string; path: string }[] = [
 ];
 
 const App: React.FC = () => {
+  // token here is just for the default Theme.
+  // no need to worry about this token thingy.
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
