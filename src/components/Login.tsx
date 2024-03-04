@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, message } from 'antd';
+import { Form, Input, Button, message, Card, Typography } from 'antd';
+const { Title, Text } = Typography;
 
 
 /**
@@ -26,7 +27,23 @@ const Login: React.FC = () => {
   };
 
   return (
-    <Form
+      <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "60vh",
+          }}>
+        <Card style={{ width: 400, height: 450 }}>
+          <div style={{ display: "flex", justifyContent: "center", height: "13vh" }}>
+            <Title level={1}>Company Logo </Title>
+          </div>
+          <div style={{height: "4vh"}}>
+            <Text strong>Sign in </Text>
+            <Text> to continue</Text>
+          </div>
+
+          <Form
       name="login-form"
       initialValues={{ remember: true }}
       onFinish={onFinish}
@@ -54,6 +71,8 @@ const Login: React.FC = () => {
         </Button>
       </Form.Item>
     </Form>
+        </Card>
+      </div>
   );
 };
 
