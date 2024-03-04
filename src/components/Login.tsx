@@ -29,12 +29,17 @@ const Login: React.FC = () => {
   return (
       <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "60vh",
+            backgroundImage: 'linear-gradient(to right, transparent 20%, #001196 75%), url(https://www.ateneo.edu/sites/default/files/2021-12/AteneoEagleSlhouette.png)',
+            backgroundRepeat:"no-repeat",
+            height: '80vh',
+            backgroundSize: '100% 100%'
           }}>
-        <Card style={{ width: 400, height: 450 }}>
+        <div
+            style={{display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+            height:"70vh"}}>
+        <Card style={{height: "41vh"}}>
           <div style={{ display: "flex", justifyContent: "center", height: "13vh" }}>
             <Title level={1}>Company Logo </Title>
           </div>
@@ -72,6 +77,7 @@ const Login: React.FC = () => {
       </Form.Item>
     </Form>
         </Card>
+        </div>
       </div>
   );
 };
