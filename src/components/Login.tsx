@@ -1,4 +1,3 @@
-import logo from './logo.png';
 import React, { useState } from 'react';
 import { Form, Input, Button, message, Card, Typography } from 'antd';
 const { Title, Text } = Typography;
@@ -44,7 +43,7 @@ const Login: React.FC = () => {
         background:'linear-gradient(to bottom, transparent 0%, #ffffff 100%)',
             border: '0px'}}>
           <div style={{ display: "flex", justifyContent: "center", height: "13vh" }}>
-              <img src={logo} alt="W2BSG" style={{
+              <img src={'https://i.ibb.co/cQtV1T6/logo.png'} alt="W2BSG" style={{
                   width:'20vw',
                   height:'9vh'
               }} />
