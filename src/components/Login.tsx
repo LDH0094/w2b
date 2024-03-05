@@ -39,9 +39,11 @@ const Login: React.FC = () => {
         justifyContent: "center",
         alignItems: "center",
             height:"70vh"}}>
-        <Card style={{height: "41vh"}}>
+        <Card style={{height: "41vh",
+        background:'linear-gradient(to bottom, transparent 0%, #ffffff 100%)',
+            border: '0px'}}>
           <div style={{ display: "flex", justifyContent: "center", height: "13vh" }}>
-            <Title level={1}>Company Logo </Title>
+            <Title level={1}>W2BSG </Title>
           </div>
           <div style={{height: "4vh"}}>
             <Text strong>Sign in </Text>
