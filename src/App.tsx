@@ -94,7 +94,7 @@ const App: React.FC = () => {
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
-                  Footer here
+                  When to Buy Steam Games
           </Footer>
         </Layout>
       </Layout>

@@ -4,6 +4,7 @@ export interface Game {
     date: string;
     time: string;
     game_name: string;
+    gameImageUrl: string;
   }
   
   interface GameCollection {
