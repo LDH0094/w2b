@@ -19,7 +19,7 @@ const Login: React.FC = () => {
     console.log("logging", values.password);
     setLoading(true);
     const _body = { username: values.username, password: values.password };
-    fetch("https://5hc699k4-8000.asse.devtunnels.ms/login/", {
+    fetch("http://127.0.0.1:8000/login", {
       mode: "no-cors",
       method: "POST",
       headers: {

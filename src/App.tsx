@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import DetailView from './components/DetailedView';
-import dummyGames from './utils/dummyData';
 import GameInput from './components/GameInput';
 import GameRecommendation from './components/GameRecommendation';
 import dummyGameDetails from './utils/dummyDetail';
@@ -68,7 +67,7 @@ const App: React.FC = () => {
               }}
             >
               <Routes>
-                <Route path="/" element={<HomePage games={dummyGames} />} />
+                <Route path="/" element={<HomePage />} />
                 <Route
                   path="/game/:gameId"
                   element={<DetailView gameDetails={dummyGameDetails} />}
