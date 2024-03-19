@@ -50,7 +50,7 @@ const Homepage: React.FC = () => {
   
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", background: "#2a475e" }}>
+    <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
       {loading ? (
         <Spin size="large" />
       ) : (
