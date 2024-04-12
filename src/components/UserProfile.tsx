@@ -12,10 +12,20 @@ const { Title, Text } = Typography;
  *  /login view desing. So you can just work around with this component to desing your things.
  *
  */
-
+const StyleList =
+    ['https://api.dicebear.com/8.x/personas/svg?seed=Marco',
+    'https://api.dicebear.com/8.x/adventurer/svg?seed=Marco',
+    'https://api.dicebear.com/8.x/micah/svg?seed=Marco',
+    'https://api.dicebear.com/8.x/miniavs/svg?seed=Marco'];
 
 const UserProfile: React.FC = () => {
 
+    const [style, setStyle] = useState(StyleList[0]);
+
+        const changeStyle = () => {
+            const index = StyleList.indexOf(style);
+            setStyle(index < StyleList.length - 1 ? StyleList[index + 1] : StyleList[0]);
+    };
 
     return (
         <div
@@ -46,9 +56,15 @@ const UserProfile: React.FC = () => {
                         justifyContent: "left",
                     }}
                 ><Space direction = "horizontal" style ={{height: "13vh",}}>
-                    <Avatar size= "large" src="https://api.dicebear.com/7.x/miniavs/svg?seed=3"  />
-                    <p>Username</p>
+                    <Avatar size= "large" src={style}/>
                     <p>Arbitrary Value<p>(NUMBER)</p></p>
+                    <Button
+                        size="small"
+                        style={{ margin: '0 16px', verticalAlign: 'middle' }}
+                        onClick={changeStyle}
+                    >
+                        Change Style
+                    </Button>
                 </Space>
                 </Card>
             </div>
