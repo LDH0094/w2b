@@ -48,7 +48,7 @@ const GameInput: React.FC<{ onSearch: (gameData: any) => void }> = ({
         </Button>
       </Flex>
 
-      {gameData && (
+      {gameData ? (
         <Card
           title={gameData.game_name}
           style={{ width: 300, margin: "20px", borderRadius: 10 }}
@@ -72,7 +72,8 @@ const GameInput: React.FC<{ onSearch: (gameData: any) => void }> = ({
             <Tag color="orange">{gameData.time} days, hold</Tag>
           )}
         </Card>
-      )}
+      ): 
+      <p>There is no game to show 🥹. Please type any game names!</p>}
     </>
   );
 };
