@@ -4,6 +4,7 @@ import { Input, Button, Card, Tag, Flex } from "antd";
 const GameInput: React.FC<{ onSearch: (gameData: any) => void }> = ({
   onSearch,
 }) => {
+  // gameData is fetched from W2B API response. 
   const [gameName, setGameName] = React.useState("");
   const [gameData, setGameData] = React.useState<any>(null);
 
@@ -13,7 +14,7 @@ const GameInput: React.FC<{ onSearch: (gameData: any) => void }> = ({
         `http://localhost:8000/games/search/${gameName}`
       );
       if (!response.ok) {
-        throw new Error("Failed to fetch game data");
+        throw new Error("Failed to fetch game data!");
       }
       const data = await response.json();
       setGameData(data);
