@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useNavigate, } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import DetailView from './components/DetailedView';
 import GameInput from './components/GameInput';
@@ -17,11 +17,11 @@ import {
 } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 import type { MenuProps } from 'antd';
-import { Avatar, Space } from "antd";
+import { Avatar, Space, Button } from "antd";
 import Login from './components/Login';
+import UserProfile from './components/UserProfile';
 
 const { Header, Content, Footer, Sider } = Layout;
-
 
 // navigation is defined here
 // icon <UserOutlined/> here is just a plain icon. Think of it as an emoji for each 
@@ -34,13 +34,14 @@ const items: { icon: React.ReactNode; label: string; path: string }[] = [
   { icon:<UserOutlined />, label: 'Login', path: '/login' },
 ];
 
+
 const App: React.FC = () => {
   // token here is just for the default Theme.
   // no need to worry about this token thingy.
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
-
+  
   return (
     <BrowserRouter>
       <Layout hasSider>
@@ -91,7 +92,12 @@ const App: React.FC = () => {
                   path="/login"
                   element={<Login/>}
                 />
+                <Route
+                    path="/userprofile"
+                    element={<UserProfile/>}
+                />
               </Routes>
+
             </div>
           </Content>
           <Footer style={{textAlign: 'left'}}>
@@ -99,7 +105,10 @@ const App: React.FC = () => {
               style={{display: 'flex',
               justifyContent:'space-between',
               width:'46.65vw'}}>
-              <Avatar size= "large" icon={<UserOutlined />} />
+              <Link to={"/userprofile"}>
+              <Button size = "large" shape="circle" icon={<UserOutlined />}>
+              </Button>
+              </Link>
               <p>
                   When to Buy Steam Games
               </p>
