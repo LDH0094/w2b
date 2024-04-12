@@ -17,6 +17,8 @@ const Homepage: React.FC = () => {
       const gamesArray = Object.keys(data).map((key) => data[key]);
 
       setGames(gamesArray);
+      console.log("GAMES: ", gamesArray);
+      
       setLoading(false);
     } catch (error: any) {
       console.error("Error fetching games:", error.message);
@@ -68,9 +70,9 @@ const Homepage: React.FC = () => {
             <p>{formatPrice(parseFloat(game.price))}</p>
             <p style={{ fontWeight: "bold", marginBottom: 5 }}>Wait Time:</p>
      
-            {parseFloat(game.time.split(":")[0]) >= 30 ? 
-            <Tag color="red">{game.time.split(":")[0]} days, DO NOT BUY</Tag> :
-            <Tag color="orange">{game.time.split(":")[0]} days, hold</Tag>
+            {parseFloat(game.time) >= 30 ? 
+            <Tag color="red">{game.time} days, DO NOT BUY</Tag> :
+            <Tag color="orange">{game.time} days, hold</Tag>
             }
           </Card>
         ))
