@@ -17,6 +17,7 @@ import {
 } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 import type { MenuProps } from 'antd';
+import { Avatar, Space } from "antd";
 import Login from './components/Login';
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -93,9 +94,19 @@ const App: React.FC = () => {
               </Routes>
             </div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>
+          <Footer style={{textAlign: 'left'}}>
+            <Space direction="horizontal"
+              style={{display: 'flex',
+              justifyContent:'space-between',
+              width:'46.65vw'}}>
+              <Avatar size= "large" icon={<UserOutlined />} />
+              <p>
                   When to Buy Steam Games
+              </p>
+            </Space>
           </Footer>
+
+
         </Layout>
       </Layout>
     </BrowserRouter>
