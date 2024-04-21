@@ -86,7 +86,7 @@ const App: React.FC = () => {
                 />
                 <Route
                   path="/recommendations"
-                  element={<GameRecommendation recommendations={[]} />}
+                  element={<GameRecommendation/>}
                 />
                   <Route
                   path="/login"
