@@ -10,6 +10,7 @@ const GameInput: React.FC<{ onSearch: (gameData: any) => void }> = ({
 
   const handleSearch = async () => {
     try {
+      if (gameName === "") return setGameData(null);
       const response = await fetch(
         `http://localhost:8000/games/search/${gameName}`
       );
@@ -49,7 +50,7 @@ const GameInput: React.FC<{ onSearch: (gameData: any) => void }> = ({
         </Button>
       </Flex>
 
-      {gameData ? (
+      {gameData && gameData.length !== 0? (
         <Card
           title={gameData.game_name}
           style={{ width: 300, margin: "20px", borderRadius: 10 }}

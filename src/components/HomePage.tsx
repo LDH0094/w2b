@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Card, Spin, Tag } from "antd";
 import { Game } from "../interfaces/game";
+import { Link } from "react-router-dom";
 
 const Homepage: React.FC = () => {
   const [games, setGames] = useState<Game[]>([]);
@@ -66,6 +67,8 @@ const Homepage: React.FC = () => {
         <Spin size="large" />
       ) : (
         games.map((game, index) => (
+          <Link key={index} to={`/game/${game._id}`}>
+         
           <Card
             key={index}
             title={game.game_name}
@@ -91,6 +94,7 @@ const Homepage: React.FC = () => {
               <Tag color="orange">{game.time} days, hold</Tag>
             )}
           </Card>
+          </Link>
         ))
       )}
     </div>

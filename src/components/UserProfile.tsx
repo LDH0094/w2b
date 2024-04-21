@@ -48,7 +48,7 @@ const UserProfile: React.FC = () => {
                 <Card
                     style={{
                         height: "20vh",
-                        width: "20vw",
+                        width: "25vw",
                         background:
                             "linear-gradient(to top, transparent 0%, #d3d3d3 0%)",
                         border: "0px",
@@ -57,7 +57,7 @@ const UserProfile: React.FC = () => {
                     }}
                 ><Space direction = "horizontal" style ={{height: "13vh",}}>
                     <Avatar size= "large" src={style}/>
-                    <p>Arbitrary Value<p>(NUMBER)</p></p>
+                    <p>ID: 102931</p>
                     <Button
                         size="small"
                         style={{ margin: '0 16px', verticalAlign: 'middle' }}

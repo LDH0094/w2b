@@ -28,7 +28,7 @@ const { Header, Content, Footer, Sider } = Layout;
 // label is where the text will be shown. 
 const items: { icon: React.ReactNode; label: string; path: string }[] = [
   { icon: <UserOutlined />, label: 'Home', path: '/' },
-  { icon: <VideoCameraOutlined />, label: 'Game Details', path: '/game/123' }, // Adjust the path as needed
+  { icon: <VideoCameraOutlined />, label: 'Game Details', path: '/game/' }, // Adjust the path as needed
   { icon: <UploadOutlined />, label: 'Search', path: '/search' },
   { icon: <BarChartOutlined />, label: 'Recommendations', path: '/recommendations' },
   { icon:<UserOutlined />, label: 'Login', path: '/login' },
@@ -72,7 +72,7 @@ const App: React.FC = () => {
                 <Route path="/" element={<HomePage />} />
                 <Route
                   path="/game/:gameId"
-                  element={<DetailView gameDetails={dummyGameDetails} />}
+                  element={<DetailView  />}
                 />
                 <Route
                   path="/search"
